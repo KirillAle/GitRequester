@@ -4,45 +4,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/authFragment">
 
-    <!-- Фрагмент авторизации -->
     <fragment
         android:id="@+id/authFragment"
         android:name="com.example.gitrequester.AuthFragment"
         android:label="Auth" />
 
-    <!-- Фрагмент списка репозиториев -->
     <fragment
         android:id="@+id/repositoriesListFragment"
         android:name="com.example.gitrequester.RepositoriesListFragment"
         android:label="Repositories List">
-
-        <!-- Правильное вложение <action> -->
         <action
             android:id="@+id/action_repositoriesListFragment_to_repositoryDetailsFragment"
             app:destination="@id/repositoryDetailsFragment" />
     </fragment>
 
-    <!-- Фрагмент деталей репозитория -->
     <fragment
         android:id="@+id/repositoryDetailsFragment"
         android:name="com.example.gitrequester.RepositoryDetailsFragment"
         android:label="Repository Details">
-
-        <!-- Аргументы, передаваемые в этот фрагмент -->
         <argument
             android:name="repoName"
             app:argType="string"
-            app:nullable="false"/>
+            app:nullable="false" />
 
         <argument
             android:name="repoDescription"
             app:argType="string"
-            app:nullable="true"/>
+            app:nullable="true" />
 
         <argument
             android:name="repoLanguage"
             app:argType="string"
-            app:nullable="true"/>
+            app:nullable="true" />
     </fragment>
-
 </navigation>
