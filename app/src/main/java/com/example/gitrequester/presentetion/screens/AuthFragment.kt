@@ -1,4 +1,4 @@
-package com.example.gitrequester
+package com.example.gitrequester.presentetion.screens
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,6 +29,7 @@ class AuthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonSignIn.setOnClickListener {
             val token = binding.EditTextToken.text.toString()
+            viewModel.onSignButtonPressed(token)
         }
     }
 

@@ -1,13 +1,12 @@
-package com.example.gitrequester
+package com.example.gitrequester.presentetion.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.example.gitrequester.R
 import com.example.gitrequester.databinding.ActivityMainBinding
-import com.example.gitrequester.databinding.AuthFragmentBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,11 +26,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         NavigationUI.setupWithNavController(binding.toolbar, navController)
-
-
     }
 
-//    Обрабатываем нажатие "Назад" в ActionBar
+//    Обрабатывае нажатие "Назад" в ActionBar
     override fun onSupportNavigateUp(): Boolean {
     val navController = (supportFragmentManager
         .findFragmentById(R.id.nav_host_fragment) as NavHostFragment)

@@ -12,6 +12,7 @@ pluginManagement {
     }
     plugins {
         id("androidx.navigation.safeargs.kotlin") version "2.7.5"
+
     }
 }
 dependencyResolutionManagement {

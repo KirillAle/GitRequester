@@ -6,12 +6,12 @@
 
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.example.gitrequester.AuthFragment"
+        android:name="com.example.gitrequester.presentetion.screens.AuthFragment"
         android:label="Auth" />
 
     <fragment
         android:id="@+id/repositoriesListFragment"
-        android:name="com.example.gitrequester.RepositoriesListFragment"
+        android:name="com.example.gitrequester.presentetion.screens.RepositoriesListFragment"
         android:label="Repositories List">
         <action
             android:id="@+id/action_repositoriesListFragment_to_repositoryDetailsFragment"
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/repositoryDetailsFragment"
-        android:name="com.example.gitrequester.RepositoryDetailsFragment"
+        android:name="com.example.gitrequester.presentetion.screens.RepositoryDetailsFragment"
         android:label="Repository Details">
         <argument
             android:name="repoName"

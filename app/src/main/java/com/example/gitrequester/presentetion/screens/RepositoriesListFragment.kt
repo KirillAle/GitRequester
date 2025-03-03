@@ -1,4 +1,4 @@
-package com.example.gitrequester
+package com.example.gitrequester.presentetion.screens
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gitrequester.Repository
+import com.example.gitrequester.RepositoryAdapter
 import com.example.gitrequester.databinding.RepositoriesListFragmentBinding
 
 class RepositoriesListFragment: Fragment() {
