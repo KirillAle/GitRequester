@@ -11,7 +11,7 @@ android {
 
 
     namespace = "com.example.gitrequester"
-    compileSdk = 34
+    compileSdk = 35
     viewBinding {
         enable = true
     }
@@ -49,14 +49,16 @@ android {
 
 dependencies {
     // Основные библиотеки Android
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Activity и Fragment KTX
-    implementation("androidx.activity:activity-ktx:1.8.2")
-    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.fragment)
+
 
     // ViewModel + LiveData (MVVM)
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
@@ -69,14 +71,10 @@ dependencies {
 
     // Retrofit (для работы с API)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-kotlinx-serialization:0.8.0")
+//    implementation("com.squareup.retrofit2:converter-kotlinx-serialization:0.8.0")
 
     // Kotlin Serialization (парсинг JSON)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
-
-    // Navigation Component (для работы с навигацией между фрагментами)
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     // View Binding (автоматическое связывание разметки с кодом)
     implementation("androidx.databinding:viewbinding:8.1.0")
@@ -84,11 +82,12 @@ dependencies {
     // Dagger Hilt (Dependency Injection)
 //    implementation("com.google.dagger:hilt-android:2.48")
 //    kapt("com.google.dagger:hilt-android-compiler:2.48"
+
     // OkHttp (для логирования сетевых запросов)
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     // Тестирование
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
