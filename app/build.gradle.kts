@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
-//    id("dagger.hilt.android.plugin")
+//  id("dagger.hilt.android.plugin")
 }
 
 android {

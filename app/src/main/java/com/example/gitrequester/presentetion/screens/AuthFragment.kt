@@ -29,7 +29,7 @@ class AuthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonSignIn.setOnClickListener {
             val token = binding.EditTextToken.text.toString()
-            viewModel.onSignButtonPressed(token)
+            viewModel.onSignButtonPressed(token, requireContext())
         }
     }
 
