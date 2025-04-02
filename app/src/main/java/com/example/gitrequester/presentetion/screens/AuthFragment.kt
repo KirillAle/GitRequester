@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.gitrequester.databinding.AuthFragmentBinding
@@ -13,14 +14,13 @@ class AuthFragment : Fragment() {
 
     private var _binding: AuthFragmentBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: AuthViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = AuthFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -29,12 +29,15 @@ class AuthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonSignIn.setOnClickListener {
             val token = binding.EditTextToken.text.toString()
-            viewModel.onSignButtonPressed(token, requireContext())
+            viewModel.onSignButtonPressed(token)
+        }
+        viewModel.state.observe(viewLifecycleOwner) {state ->
+            Toast.makeText(requireContext(), state, Toast.LENGTH_LONG).show()
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 

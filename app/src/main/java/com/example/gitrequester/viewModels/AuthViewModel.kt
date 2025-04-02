@@ -15,11 +15,10 @@ class AuthViewModel : ViewModel() {
 
 
 
-    fun onSignButtonPressed(token: String, context: Context) {
+    fun onSignButtonPressed(token: String) {
 
         if (token.isBlank()) {
             _state.value = "Token can not be empty"
-            Toast.makeText(context, "Token can not be empty", Toast.LENGTH_LONG).show()
             return
         }
         _state.value = "Loading..."
@@ -33,26 +32,12 @@ class AuthViewModel : ViewModel() {
 
                 if (responseCode == 200) {
                     _state.value = "Success: $response"
-                    Toast.makeText(
-                        context,
-                        "Success: $response",
-                        Toast.LENGTH_LONG
-                    ).show()
-
                 } else {
                     _state.value = "Invalid token: $responseCode\n$response"
-                    Toast.makeText(
-                        context,
-                        "Invalid token: $responseCode\n$response",
-                        Toast.LENGTH_LONG
-                    ).show()
                 }
-
             } catch (e: Exception) {
                 _state.value = "Error: ${e.message}"
-                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_LONG).show()
             }
         }
     }
-
 }
