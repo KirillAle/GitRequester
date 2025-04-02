@@ -3,6 +3,7 @@ package com.example.gitrequester
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gitrequester.data.Repository
 import com.example.gitrequester.databinding.RepositiryItemBinding
 
 class RepositoryAdapter(

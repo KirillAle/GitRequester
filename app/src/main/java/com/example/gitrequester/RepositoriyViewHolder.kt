@@ -1,6 +1,7 @@
 package com.example.gitrequester
 
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gitrequester.data.Repository
 import com.example.gitrequester.databinding.RepositiryItemBinding
 
 class RepositoryViewHolder(private val binding: RepositiryItemBinding) :

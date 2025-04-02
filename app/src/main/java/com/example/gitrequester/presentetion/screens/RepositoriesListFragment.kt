@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.gitrequester.Repository
+import com.example.gitrequester.data.Repository
 import com.example.gitrequester.RepositoryAdapter
 import com.example.gitrequester.databinding.RepositoriesListFragmentBinding
 
@@ -36,6 +36,7 @@ class RepositoriesListFragment: Fragment() {
             Repository("Repo 5", null, "Java"),
             Repository("Repo 6", "Тестовый репозиторий", null)
         )
+
 
         val adapter = RepositoryAdapter(repositories) { repository ->
             val action = RepositoriesListFragmentDirections

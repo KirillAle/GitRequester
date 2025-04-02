@@ -1,6 +1,5 @@
-package com.example.gitrequester
+package com.example.gitrequester.data
 
-import org.intellij.lang.annotations.Language
 import java.io.Serializable
 
 data class Repository(
@@ -8,3 +7,5 @@ data class Repository(
     val description: String?,
     val language: String?
 ) : Serializable
+
+
