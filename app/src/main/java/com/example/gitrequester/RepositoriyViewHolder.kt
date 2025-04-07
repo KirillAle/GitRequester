@@ -12,9 +12,6 @@ class RepositoryViewHolder(private val binding: RepositiryItemBinding) :
         binding.textViewRepoDescription.text = repository.description ?: "NO DESCRIPTION"
         binding.textViewRepoLanguage.text = repository.language ?: "NO LANGUAGE"
 
-
         binding.root.setOnClickListener{ onClick(repository) }
     }
-
-
 }

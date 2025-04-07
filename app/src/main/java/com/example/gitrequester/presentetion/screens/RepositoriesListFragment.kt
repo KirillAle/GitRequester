@@ -50,6 +50,7 @@ class RepositoriesListFragment: Fragment() {
                 )
             findNavController().navigate(action)
         }
+        binding.recyclerViewRepositories.adapter = adapter
         binding.recyclerViewRepositories.layoutManager = LinearLayoutManager(requireContext())
     }
 

@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Название репозитория -->
+
     <TextView
         android:id="@+id/textViewRepoName"
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:textSize="24sp"
         android:textStyle="bold"/>
 
-    <!-- Описание репозитория -->
+
     <TextView
         android:id="@+id/textViewRepoDescription"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:textSize="18sp"
         android:paddingTop="8dp"/>
 
-    <!-- Язык программирования -->
+
     <TextView
         android:id="@+id/textViewRepoLanguage"
         android:layout_width="wrap_content"
