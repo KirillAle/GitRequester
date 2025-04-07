@@ -7,12 +7,20 @@
     <fragment
         android:id="@+id/authFragment"
         android:name="com.example.gitrequester.presentetion.screens.AuthFragment"
-        android:label="Auth" />
+        android:label="Auth">
+        <action
+            android:id="@+id/action_authFragment_to_repositoriesListFragment"
+            app:destination="@id/repositoriesListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/repositoriesListFragment"
         android:name="com.example.gitrequester.presentetion.screens.RepositoriesListFragment"
         android:label="Repositories List">
+        <argument
+            android:name="repositories"
+            app:argType="com.example.gitrequester.data.Repository[]"
+            app:nullable="false" />
         <action
             android:id="@+id/action_repositoriesListFragment_to_repositoryDetailsFragment"
             app:destination="@id/repositoryDetailsFragment" />

@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.9.0"
 //  id("dagger.hilt.android.plugin")
 }
 
@@ -58,6 +60,8 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.fragment)
+
+
 
 
     // ViewModel + LiveData (MVVM)
